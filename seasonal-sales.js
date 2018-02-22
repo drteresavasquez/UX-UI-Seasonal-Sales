@@ -31,3 +31,15 @@ getStuff('categories.json')
     });
 });
 
+getStuff('products.json')
+.then((results)=>{
+     return getData(results);
+}).then((data)=>{
+    data.forEach((item)=>{
+        console.log(item.id);
+        console.log(item.name);
+        console.log(item.price);
+        console.log(item.category_id);
+    });
+});
+
